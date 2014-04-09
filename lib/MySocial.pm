@@ -20,4 +20,8 @@ sub code {
     $code;
 }
 
+sub get_string {
+    eval $code;
+}
+
 1;
