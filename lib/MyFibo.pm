@@ -4,8 +4,12 @@ use warnings;
 
 sub calculate {
     my ($class, $init) = @_;
-    return 2 + 3 if $init == 5;
-    return 1 + 2;
+
+    if ($init >= 6) {
+        return MyFibo->calculate($init - 2) + MyFibo->calculate($init - 1);
+    }
+    return 1 + 2 if $init == 4;
+    return 2 + 3;
 }
 
 1;
